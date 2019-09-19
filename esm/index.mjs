@@ -24,7 +24,7 @@ export function createTween(easingFunction, b, c, d, s) {
     let startTime;
     let id = requestAnimationFrame(function sample(time) {
       startTime = startTime || time;
-      const t = time - startTime;
+      var t = time - startTime;
       if (t < d) {
         observer.next(easingFunction(t, b, c, d, s));
         id = requestAnimationFrame(sample);
