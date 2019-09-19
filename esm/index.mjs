@@ -21,8 +21,8 @@ import { Observable } from "rxjs/_esm5"; // eslint-disable-line
  */
 export function createTween(easingFunction, b, c, d, s) {
   return Observable.create(function(observer) {
-    let startTime;
-    let id = requestAnimationFrame(function sample(time) {
+    var startTime;
+    var id = requestAnimationFrame(function sample(time) {
       startTime = startTime || time;
       var t = time - startTime;
       if (t < d) {
